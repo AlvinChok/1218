@@ -59,23 +59,23 @@
   </audio>
   <div class="flex items-center justify-center h-screen">
     <div class="flex flex-col items-center p-4">
-      <img id="imageDisplay" src="./images/8.gif" alt="" class="rounded-md h-[300px]" style="object-fit: cover;" />
+      <img id="imageDisplay" src="./images/1.gif" alt="" class="rounded-md h-[300px]" style="object-fit: cover;" />
       <h2 id="valentineQuestion" class="responsive-text text-4xl font-bold italic text-[#bd1e59] my-4 text-center">Bee Biii!!! Happy 24th Birthdayyyy😘😘</h2>
       <div class="flex gap-4 pt-4 items-center" id="responseButtons">
         <button id="yesButton"
           class="responsive-button bounce2 inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium disabled:pointer-events-none disabled:opacity-50 hover:bg-green-400 min-h-12 min-w-[75px] px-4 py-2 bg-green-500 text-white transition">
-          I Lovee Youu
+          我爱niiiii🥰
         </button>
         <button id="noButton"
           class="responsive-button inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition disabled:pointer-events-none disabled:opacity-50 hover:bg-red-700 h-12 min-w-[75px] w-auto px-4 py-2 bg-red-500 text-white">
-          Love Abit Abit Looo~ 😛
+          你确定你要按这个maaaa嘻嘻嘻👀
         </button>
       </div>
     </div>
   </div>
 
   <script type="module">
-    import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+    //import confetti from 'https://cdn.skypack.dev/canvas-confetti';
     const yesButton = document.getElementById('yesButton');
     const noButton = document.getElementById('noButton');
     const imageDisplay = document.getElementById('imageDisplay');
@@ -85,8 +85,8 @@
     let noClickCount = 0;
     const imagePaths = [
       "./images/1.gif",
-      "./images/3.gif",
-      "./images/2.gif",
+      "./images/6.gif",
+      "./images/8.gif",
       "./images/7.gif",
       "./images/5.gif",
       "./images/4.gif"
@@ -97,12 +97,12 @@
         noClickCount++;
         imageDisplay.src = imagePaths[noClickCount];
         valentineQuestion.innerHTML = [
-          "Babyyyyy~ Happy 520!!!",
-          "Got miss me or nottt",
-          "Really no mehhhh",
-          "U know I miss you mahh",
-          "I lovee youuuu😘",
-          "Babyyyy I'm so happy to have youuuuu❤️<br>You mean so much to me🥰🥰"
+          "Biii~ Happy Birthdayyy!!!",
+          "长大一岁loooo 今年第一次陪你过生日~",
+          "这一年可能过得不太好 发生了一些事情 还要一个人去US那么久",
+          "接下来的日子 有我在 我不会让你受伤derrr🥹",
+          "希望你继续做自己，不需要改变什么😘 我会一直陪伴你支持你！！！",
+          "很开心你有在慢慢的走进我的生活里陪伴我<br>我很喜欢你 在乎你 所以我满脑子都是我们❤️❤️<br>我真的好爱你呀啊啊啊啊啊🥰🥰"
         ][noClickCount]; // Change the question text
         yesButton.textContent = [
           "I Lovee Youu",
@@ -116,22 +116,62 @@
         if (noClickCount < 6) {
           noButton.textContent = [
             "No",
-            "Okayy Okayy Laa😛",
-            "Miss abit looo~",
-            "Know laaa aiyooo🙂‍↔️",
-            "Hanaa loveee youu tooo❤️",
-            "🙂‍↔️🙂‍↔️"
+            "接下来都会有你陪我👀",
+            "好naaaa👀",
+            "我也是👀",
+            "知道了naaa👀",
+            "没有next了naaaa🙂‍↔️🙂‍↔️"
           ][noClickCount];
         }
       }
     });
 
+    function confettiEffect() {
+    const colors = ['#ff4d88', '#ffcc00', '#66ccff', '#66ff99', '#cc66ff', '#ff6666'];
+
+    for (let i = 0; i < 120; i++) {
+        const piece = document.createElement('div');
+
+        piece.style.position = 'fixed';
+        piece.style.width = '10px';
+        piece.style.height = '10px';
+        piece.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+
+        piece.style.left = Math.random() * 100 + 'vw';
+        piece.style.top = '-20px';
+        piece.style.zIndex = '9999';
+        piece.style.pointerEvents = 'none';
+
+        piece.style.transform =
+            `rotate(${Math.random() * 360}deg)`;
+
+        piece.style.transition =
+            `top ${2 + Math.random() * 3}s linear,
+             transform ${2 + Math.random() * 3}s linear`;
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => {
+            piece.style.top = '110vh';
+            piece.style.transform =
+                `rotate(${720 + Math.random() * 720}deg)`;
+        }, 10);
+
+        setTimeout(() => {
+            piece.remove();
+        }, 5500);
+    }
+}
+
     yesButton.addEventListener('click', () => {
       document.getElementById("myAudio").play();
       imageDisplay.src = './images/10.jpg'; // Change to image7.gif
-      valentineQuestion.innerHTML = "<br>Yayyyyyyyyy!!!!<br>I Loveeeeee Youuuu Bee Biiii❤️ Thanks for everythinggggg😘😘😘<br><br>❤️❤️❤️Happy 520!!!❤️❤️❤️"; // Change the question text
+      valentineQuestion.innerHTML = "<br>生日快乐呀啊啊！！！<br>希望你天天都开开心心 一切都顺顺利利derrrrr😘😘😘<br><br>❤️❤️❤️等你回来Okayyyy❤️❤️❤️<br><br>By: 你专属的大朋友🥰"; // Change the question text
       responseButtons.style.display = 'none'; // Hide both buttons
-      confetti(); // Trigger confetti animation
+
+      confettiEffect();
+      //confetti(); // Trigger confetti animation
     });
   </script>
 </body>
