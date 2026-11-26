@@ -67,8 +67,8 @@
           我爱niiiii🥰
         </button>
         <button id="noButton"
-          class="responsive-button inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition disabled:pointer-events-none disabled:opacity-50 hover:bg-red-700 h-12 min-w-[75px] w-auto px-4 py-2 bg-red-500 text-white">
-          你确定你要按这个maaaa嘻嘻嘻👀
+          class="responsive-button inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition disabled:pointer-events-none disabled:opacity-50 hover:bg-pink-700 h-12 min-w-[75px] w-auto px-4 py-2 bg-gray-500 text-white">
+          按我按我嘻嘻嘻👀
         </button>
       </div>
     </div>
@@ -101,26 +101,26 @@
           "长大一岁loooo 今年第一次陪你过生日~",
           "这一年可能过得不太好 发生了一些事情 还要一个人去US那么久",
           "接下来的日子 有我在 我不会让你受伤derrr🥹",
-          "希望你继续做自己，不需要改变什么😘 我会一直陪伴你支持你！！！",
+          "希望你继续做自己，你很好呢不需要改变什么 在我身边你可以放心的做自己😘<br><br> 不管怎样我都会接住你 我会一直陪伴你支持你！！！",
           "很开心你有在慢慢的走进我的生活里陪伴我<br>我很喜欢你 在乎你 所以我满脑子都是我们❤️❤️<br>我真的好爱你呀啊啊啊啊啊🥰🥰"
         ][noClickCount]; // Change the question text
         yesButton.textContent = [
-          "I Lovee Youu",
-          "I Misss Youuu",
-          "I Loveeee Youuuu😚",
-          "I Loveeee Youuuu😘",
+          "我爱niiiii🥰",
+          "I Misss Youuu👉👈",
+          "Hug Hug😚",
+          "Kiss Kiss😘",
           "I Loveeee Youuuu!❤️",
           "I Loveeeeeeee Youuuuuuuu!!😘😘"
         ][noClickCount];
 
         if (noClickCount < 6) {
           noButton.textContent = [
-            "No",
+            "按我按我嘻嘻嘻👀",
             "接下来都会有你陪我👀",
             "好naaaa👀",
             "我也是👀",
             "知道了naaa👀",
-            "没有next了naaaa🙂‍↔️🙂‍↔️"
+            "没有next了naa🙂‍↔️ 你就说你爱我baaaa嘻嘻"
           ][noClickCount];
         }
       }
@@ -167,7 +167,7 @@
     yesButton.addEventListener('click', () => {
       document.getElementById("myAudio").play();
       imageDisplay.src = './images/10.jpg'; // Change to image7.gif
-      valentineQuestion.innerHTML = "<br>生日快乐呀啊啊！！！<br>希望你天天都开开心心 一切都顺顺利利derrrrr😘😘😘<br><br>❤️❤️❤️等你回来Okayyyy❤️❤️❤️<br><br>By: 你专属的大朋友🥰"; // Change the question text
+      valentineQuestion.innerHTML = "<br>生日快乐呀啊啊！！！<br>希望你天天都开开心心 一切都顺顺利利derrrr 接下来的日子会越来越好 越来越幸福😘😘😘<br><br>❤️❤️❤️等你回来Okayyyy❤️❤️❤️<br><br>By: 你专属的大朋友🥰"; // Change the question text
       responseButtons.style.display = 'none'; // Hide both buttons
 
       confettiEffect();
